@@ -24,7 +24,7 @@
 		"@marfeel/core": "^1.0.0-alpha.22849"
 	},
 	"devDependencies": {
-		"@marfeel/cli": "^1.0.1-snapshot.178",
+		"@marfeel/cli": "^1.0.1-snapshot.450",
 		"@marfeel/eslint-config-mediagroup": "^1.0.1-snapshot.40"
 	},
 	"eslintConfig": {
