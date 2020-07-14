@@ -1,0 +1,38 @@
+{
+	"name": "__REPOSITORY_NAME_LOWER_CASE__",
+	"version": "1.0.0",
+	"description": "Mediagroup %REPOSITORY_NAME% repository",
+	"main": "index.js",
+	"scripts": {
+		"test": "marfeel test",
+		"build": "marfeel build",
+		"e2e": "marfeel e2e",
+		"lint": "marfeel lint",
+		"serve": "marfeel serve"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Marfeel/%REPOSITORY_NAME%.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Marfeel/%REPOSITORY_NAME%/issues"
+	},
+	"homepage": "https://github.com/Marfeel/%REPOSITORY_NAME%#readme",
+	"dependencies": {
+		"@marfeel/core": "^1.0.0-alpha.22849"
+	},
+	"devDependencies": {
+		"@marfeel/cli": "^1.0.1-snapshot.178",
+		"@marfeel/eslint-config-mediagroup": "^1.0.1-snapshot.40"
+	},
+	"eslintConfig": {
+		"extends": "@marfeel/eslint-config-mediagroup"
+	},
+	"eslintIgnore": [
+		"**/*.js",
+		"!**/src/**/*.js",
+		"**/src/whiteCollar/*.js"
+	]
+}
