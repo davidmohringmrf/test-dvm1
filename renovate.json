@@ -1,3 +1,4 @@
 {
 	"extends": ["github>Marfeel/renovate-config"]
+	
 }
