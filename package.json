@@ -14,6 +14,7 @@
 		"type": "git",
 		"url": "git+https://github.com/Marfeel/%REPOSITORY_NAME%.git"
 	},
+	
 	"author": "",
 	"license": "ISC",
 	"bugs": {
