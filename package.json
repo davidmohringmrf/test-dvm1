@@ -36,5 +36,6 @@
 		"!**/src/**/*.js",
 		"**/src/whiteCollar/*.js"
 	]
+	
 }
 
