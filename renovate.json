@@ -18,6 +18,7 @@
     "requiredStatusChecks" : null,
     "separateMinorPatch" : true,
     "recreateClosed": true,
+    "automerge": "true",
     "commitMessagePrefix": "build(renovate):",
     "commitMessageAction": "Update",
     "branchTopic": "{{{depNameSanitized}}}-{{{newMajor}}}{{#if isPatch}}.{{{newMinor}}}{{/if}}.{{{newVersion}}}{{#if isLockfileUpdate}}-lockfile{{/if}}"
