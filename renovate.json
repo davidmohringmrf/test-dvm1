@@ -1,16 +1,7 @@
 {
   "enabled": true,
-  "enabledManagers": ["npm", "dockerfile"],
+  "enabledManagers": ["dockerfile"],
   "packageRules": [
-    {
-      "commitMessagePrefix": "build(renovate) ",
-      "ignoreUnstable": true,
-      "ignoreNpmrcFile": true,
-      "labels": ["dependencies", "merge"],
-      "packagePatterns": ["^@marfeel"],
-      "rangeStrategy": "update-lockfile",
-      "recreateClosed": true
-    },
     {
       "datasources": ["docker"],
       "extends": [
@@ -21,7 +12,8 @@
         "docker:enableMajor"
       ],
       "commitMessageAction": "[MarfeelCDN] Update config version",
-      "commitMessageTopic": ""
+      "commitMessageTopic": "",
+	  "branchTopic": "{{{depNameSanitized}}}-{{{currentValue}}}"
     }
   ],
   "hostRules": [
