@@ -1,1 +1,3 @@
-FROM docker-proxy.mrf.io/renovate-test-1:0.0.1 
+FROM ubuntu
+
+ENTRYPOINT ["/bin/bash"]
