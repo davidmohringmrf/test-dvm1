@@ -1,1 +1,1 @@
-FROM docker-proxy.mrf.io/mfastly:0.0.552
+FROM docker-proxy.mrf.io/mfastly:0.0.554
