@@ -1,0 +1,4 @@
+mrf-base-chart:
+  image:
+    repository: docker-proxy.mrf.io/renovate-test-1
+    tag: 0.0.5
