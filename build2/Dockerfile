@@ -1,1 +1,1 @@
-FROM docker-proxy.mrf.io/renovate-test-1:0.0.4
+FROM docker-proxy.mrf.io/renovate-test-1:0.0.5
