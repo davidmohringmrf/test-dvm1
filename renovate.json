@@ -1,3 +1,36 @@
 {
-	"extends": ["github>Marfeel/renovate-config"]
+  "enabled": true,
+  "enabledManagers": ["npm", "dockerfile"],
+  "packageRules": [
+    {
+      "commitMessagePrefix": "build(renovate) ",
+      "ignoreUnstable": true,
+      "ignoreNpmrcFile": true,
+      "labels": ["dependencies", "merge"],
+      "packagePatterns": ["^@marfeel"],
+      "rangeStrategy": "update-lockfile",
+      "recreateClosed": true
+    },
+    {
+      "datasources": ["docker"],
+      "extends": [
+        "config:base",
+        ":disableRateLimiting",
+        ":prImmediately",
+        ":docker",
+        "docker:enableMajor"
+      ],
+      "commitMessageAction": "[MarfeelCDN] Update config version",
+      "commitMessageTopic": ""
+    }
+  ],
+  "hostRules": [
+    {
+      "hostName": "079185202623.dkr.ecr.eu-west-1.amazonaws.com",
+      "username": "AKIARE36OJW7VOWTCM7M",
+      "encrypted": {
+        "password": "sevfoOmCaC0mxehrjOAznNzvjfTYn0sAt0bOIS6vxRnvnW56f5bXetNk5traIIeVaXnAVbVruq0Ie9Y2WEKG0Hew5qoUr9oHTRC0o7bnVIsGpy7G3JsNuUHS6QFjtzsLNufdOB+v5lJwevWGPtRBY8/BcUqD8ernp0acCwmw/lzgNRT1Wwtmlm3wEzMkeYDJ6JTSlbGlPG58KRI+B7iZ8evB5qi91u+4cxqcitgFGS6wxgh+BwwiNHFWGBu/dQLRNZududkJw622OOS7GsOdP/bewwCdjpu5zQ8N+dXt1HL4ua7xIU/S3J3zR12S1CwVCXq/GddkeRBWEWzkpLu3RFuW9b3cfJ2J619n/GtgBpiCZdDcSAB/u0IG4unAR2g1FI8qesN9SxmgTJQbssrh6SRXSsZ2FsrO6FXFu5ThxdOLTQTSCwfNImQyVqQmIA2NTI6WrO0qtg6fDTqzBXeRpDesZxlqdzFN6cc5UGRRbvEb16XoGvLtJKowXDfPIfdkEefisImNNMXOXevVy7zao3r3/Lt4d+nj5JHoptH94xOLx+EenLN0KcXdUSr4CGFnF3WR0xFNTlkaBgXB554tdqMwOQJXAIIx6v6m9qSYU4/ej7gwhsXmnD+xve4a/io5eYmJW0U2V47WS57DUxrjrYlD5SarE5EskzzK/6ivNO4="
+      }
+    }
+  ]
 }
