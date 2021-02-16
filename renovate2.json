@@ -1,27 +1,22 @@
 {
   "enabled": true,
-  "enabledManagers": ["helm-values"],
-  "helm-values": {
-    "fileMatch": ["(^|/)image\\.yaml$"],
-    "versioning": "docker"
-  },
-  "ignorePaths": [".templates/"],
-  "packageRules": [{
-    "datasources": ["helm","docker"],
-    "extends": [
-      "config:base",
-      ":disableRateLimiting",
-      ":prImmediately",
-      ":docker",
-      "docker:enableMajor"
-    ],
-    "requiredStatusChecks" : null,
-    "separateMinorPatch" : true,
-    "recreateClosed": true,
-    "commitMessagePrefix": "build(renovate):",
-    "commitMessageAction": "Update",
-    "branchTopic": "{{{depNameSanitized}}}-{{{newMajor}}}{{#if isPatch}}.{{{newMinor}}}{{/if}}.{{{newVersion}}}{{#if isLockfileUpdate}}-lockfile{{/if}}"
-  }],
+  "enabledManagers": ["dockerfile"],
+  "packageRules": [
+    {
+      "datasources": ["docker"],
+      "extends": [
+        "config:base",
+        ":disableRateLimiting",
+        ":prImmediately",
+        ":docker",
+        "docker:enableMajor"
+      ],
+      "recreateClosed": true,
+      "commitMessageAction": "[MarfeelCDN] Update config version",
+      "commitMessageTopic": "",
+      "branchTopic": "{{{depNameSanitized}}}-{{{currentValue}}}"
+    }
+  ],
   "hostRules": [
     {
       "hostName": "079185202623.dkr.ecr.eu-west-1.amazonaws.com",
